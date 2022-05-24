@@ -65,7 +65,7 @@ class Calculator implements Calculate{
     public String div(StringBuilder a,int b) {
         if(a.indexOf("\"")!=-1&&a.indexOf("\"",a.length()-1)!=-1&&b<=10){
             a.deleteCharAt(0).deleteCharAt(a.length()-1);
-            a.delete(a.length()/2,a.length());
+            a.delete(a.length()/b,a.length());
             return result.append(a).append("\"").toString();}
         else {
             throw new NullPointerException("Вы ввели неправильное выражение");
